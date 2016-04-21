@@ -1,0 +1,118 @@
+WARNING: You should uninstall ModemManager as it conflicts with APM and Pixhawk
+Connect 192.168.10.4:14550 source_system=255
+Failed to load module: No module named terrain. Use 'set moddebug 3' in the MAVProxy console to enable traceback
+Failed to load module: No module named adsb. Use 'set moddebug 3' in the MAVProxy console to enable traceback
+Log Directory: 
+Telemetry log: mav.tlog
+Waiting for heartbeat from 192.168.10.4:14550
+MAV> fence breach
+Vcc 0.0
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1252
+GPS lock at 0 meters
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1239
+Tiempo empleado en uS: 1304
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1918
+Sending LIDAR360 MAVLINK message
+online system 1
+STABILIZE> Mode STABILIZE
+Tiempo empleado en uS: 1250
+Sending LIDAR360 MAVLINK message
+APM: APM:Copter V3.4-dev (37426e4b)
+APM: Frame: HEXA
+Tiempo empleado en uS: 1260
+Tiempo empleado en uS: 1238
+Tiempo empleado en uS: 1271
+Tiempo empleado en uS: 1224
+Tiempo empleado en uS: 1868
+Tiempo empleado en uS: 1234
+Tiempo empleado en uS: 1243
+Flight battery 100 percent
+Tiempo empleado en uS: 1269
+Received 555 parameters
+Saved 555 parameters to mav.parm
+Tiempo empleado en uS: 1245
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1246
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1246
+Tiempo empleado en uS: 1876
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1280
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1230
+Sending LIDAR360 MAVLINK message
+APM: PreArm: Throttle below Failsafe
+Tiempo empleado en uS: 1271
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1261
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1261
+Tiempo empleado en uS: 1304
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1943
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1232
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1233
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1287
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1299
+Tiempo empleado en uS: 1245
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1290
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1907
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1243
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1252
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1245
+Tiempo empleado en uS: 1251
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1258
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1248
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1951
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1233
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1241
+Tiempo empleado en uS: 1265
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1241
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1241
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1890
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1246
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1258
+Tiempo empleado en uS: 1230
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1264
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1258
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1809
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1250
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1254
+Tiempo empleado en uS: 1241
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1270
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1257
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1792
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1206
+Sending LIDAR360 MAVLINK message
+Tiempo empleado en uS: 1267

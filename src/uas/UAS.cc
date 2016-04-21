@@ -109,6 +109,9 @@ UAS::UAS(MAVLinkProtocol* protocol, int id) : UASInterface(),
     altitudeAMSL(0.0),
     altitudeRelative(0.0),
 
+    distance_left(0.0),
+    distance_right(0.0),
+
     globalEstimatorActive(false),
     latitude_gps(0.0),
     longitude_gps(0.0),
@@ -1348,6 +1351,24 @@ void UAS::receiveMessage(LinkInterface* link, mavlink_message_t message)
             emit rangeFinderUpdate(this, rangeFinder.distance, rangeFinder.voltage);
         }
             break;
+
+        case MAVLINK_MSG_ID_LIDAR_360_INFO:
+        {
+            mavlink_lidar_360_info_t lidar360;
+            mavlink_msg_lidar_360_info_decode(&message, &lidar360);
+
+            // Data scaling
+            for(uint16_t j=0; j<180; j++)
+                zdistance[j] = (float)(lidar360.zdistance[j])*1000.0/255.0;  // 1000.0 maximum range defined in Lidar360.h. Just aimed to MAVLink purposes
+
+            //setLidar360distance(zdistance);
+            setLidar360distance(lidar360.distance_left);
+
+            lidar360LoopCounter = lidar360.loop_number;
+            distance_left = lidar360.distance_left;
+            distance_right = lidar360.distance_right;
+            break;
+        }
         // Messages to ignore
         case MAVLINK_MSG_ID_RAW_PRESSURE:
         case MAVLINK_MSG_ID_SCALED_PRESSURE:

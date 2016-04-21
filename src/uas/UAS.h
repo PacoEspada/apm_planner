@@ -41,6 +41,8 @@ This file is part of the QGROUNDCONTROL project
 #include "QGCJSBSimLink.h"
 //#include "QGCXPlaneLink.h"
 
+#define MAV_AUTOPILOT_PIXHAWK   MAV_AUTOPILOT_RESERVED  // Allows compatibility to direct generated MAVLink libraries
+
 /**
  * @brief A generic MAVLINK-connected MAV/UAV
  *
@@ -101,6 +103,7 @@ public:
     Q_PROPERTY(double latitude READ getLatitude WRITE setLatitude NOTIFY latitudeChanged)
     Q_PROPERTY(double longitude READ getLongitude WRITE setLongitude NOTIFY longitudeChanged)
     Q_PROPERTY(double satelliteCount READ getSatelliteCount WRITE setSatelliteCount NOTIFY satelliteCountChanged)
+    Q_PROPERTY(float lidar360distance READ getLidar360distance WRITE setLidar360distance NOTIFY lidar360distanceChanged)
     Q_PROPERTY(bool isLocalPositionKnown READ localPositionKnown)
     Q_PROPERTY(bool isGlobalPositionKnown READ globalPositionKnown)
     Q_PROPERTY(double roll READ getRoll WRITE setRoll NOTIFY rollChanged)
@@ -228,6 +231,18 @@ public:
     int getSatelliteCount() const
     {
         return m_satelliteCount;
+    }
+
+    float getLidar360distance()
+    {
+        //return zdistance;
+        return distance_left;
+    }
+
+    void setLidar360distance(float val)
+    {
+        emit lidar360distanceChanged(val, "lidar360distance");
+        emit valueChanged(this->uasId,"lidar360distance","m",QVariant(val),getUnixTime());
     }
 
     void setGpsHdop(double val)
@@ -537,6 +552,14 @@ protected: //COMMENTS FOR TEST UNIT
     quint64 imageStart;
     bool blockHomePositionChanges;   ///< Block changes to the home position
     bool receivedMode;          ///< True if mode was retrieved from current conenction to UAS
+
+    // LIDAR360
+    uint32_t lidar360LoopCounter;   /// < Lidar360 loop data counter
+    float zdistance[180];            /// < Distance array in cm (pitch 2 deg)
+    float distance_left;            /// < Distance to the left point in cm
+    float distance_right;           /// < Distance to the right point in cm
+
+
 
 #if defined(QGC_PROTOBUF_ENABLED) && defined(QGC_USE_PIXHAWK_MESSAGES)
     px::GLOverlay overlay;
@@ -1045,6 +1068,7 @@ signals:
     void groundSpeedChanged(double val, QString name);
     void airSpeedChanged(double val, QString name);
     void bearingToWaypointChanged(double val,QString name);
+    void lidar360distanceChanged(float val,QString name);
 
 protected:
     /** @brief Get the UNIX timestamp in milliseconds, enter microseconds */

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>739</width>
-    <height>205</height>
+    <height>499</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -160,6 +160,19 @@
        <string>ZOOM:</string>
       </property>
      </widget>
+     <widget class="QCustomPlot" name="Lidar360plot" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>291</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+     </widget>
     </widget>
    </item>
    <item row="1" column="0">
@@ -197,6 +210,12 @@
    <class>QGCMapWidget</class>
    <extends>QWidget</extends>
    <header>QGCMapWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
